@@ -48,7 +48,7 @@
                     <div class="container">
                         <div class="d-flex align-items-center justify-content-center small">
                             <div class="text-muted">Copyright &copy; <?= date("Y"); ?><a href="<?= base_url(); ?>" class="ml-1"><?= $appname = (empty($dataapp['nama_app_absensi'])) ? 'Absensi Online' : $dataapp['nama_app_absensi']; ?></a>
-                                <div class="d-inline">Powered By<a href="https://github.com/sandyh90" class="ml-1">Pickedianz</a></div>
+                                <div class="d-inline">Powered By<a href="https://github.com/anrdart" class="ml-1">TEAM 6</a></div>
                             </div>
                         </div>
                     </div>

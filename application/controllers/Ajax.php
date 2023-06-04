@@ -652,24 +652,6 @@ class Ajax extends CI_Controller
         ];
         $validation = [
             [
-                'field' => 'nama_instansi',
-                'label' => 'Nama Instansi',
-                'rules' => 'trim|required|xss_clean',
-                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
-            ],
-            [
-                'field' => 'pesan_jumbotron',
-                'label' => 'Pesan Jumbotron',
-                'rules' => 'trim|required|xss_clean',
-                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.']
-            ],
-            [
-                'field' => 'nama_app_absen',
-                'label' => 'Nama Aplikasi Absen',
-                'rules' => 'trim|required|xss_clean|max_length[20]',
-                'errors' => ['required' => 'You must provide a %s.', 'xss_clean' => 'Please check your form on %s.', 'max_length' => 'Nama aplikasi terlalu panjang, Max Karakter 20!']
-            ],
-            [
                 'field' => 'timezone_absen',
                 'label' => 'Zona Waktu Absen',
                 'rules' => 'trim|required|xss_clean',
