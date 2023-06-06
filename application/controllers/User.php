@@ -14,6 +14,7 @@ class User extends CI_Controller
         $this->get_datasetupapp = $this->M_Front->fetchsetupapp();
     }
 
+    //Fitur Profil
     public function setting()
     {
         $data = [

@@ -13,6 +13,7 @@ class Err extends CI_Controller
         $this->get_datasetupapp = $this->M_Front->fetchsetupapp();
     }
 
+    //Fitur ERROR
     public function block()
     {
         $data = [

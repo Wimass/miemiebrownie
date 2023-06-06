@@ -15,7 +15,7 @@ class Home extends CI_Controller
 		date_default_timezone_set($timezone_all['timezone']);
 	}
 
-
+	//Fitur Front-End HOME PAGE
 	public function index()
 	{
 		if (date("H") < 4) {

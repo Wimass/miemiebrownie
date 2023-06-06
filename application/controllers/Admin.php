@@ -14,7 +14,7 @@ class Admin extends CI_Controller
         $this->get_datasetupapp = $this->M_Front->fetchsetupapp();
     }
 
-
+    //Fitur Back-End ADMIN PAGE
     public function settingapp()
     {
         is_admin();

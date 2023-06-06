@@ -16,7 +16,7 @@ class Docs extends CI_Controller
         date_default_timezone_set($timezone_all['timezone']);
     }
 
-    //Fitur Print
+    //Fitur PRINT DOKUMEN
     public function print()
     {
         if (!empty($this->input->get('id_absen'))) {

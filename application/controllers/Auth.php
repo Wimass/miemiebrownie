@@ -11,6 +11,7 @@ class Auth extends CI_Controller
         $this->get_datasetupapp = $this->M_Front->fetchsetupapp();
     }
 
+    //Fitur Autentifikasi
     public function login()
     {
         if ($this->session->userdata('username')) {
