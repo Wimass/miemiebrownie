@@ -76,14 +76,14 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>No</th>
                                     <th>Jam Masuk</th>
                                     <th>Nama Pegawai</th>
                                     <th>Status</th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                             </tbody>
                         </table>
@@ -106,14 +106,14 @@
                                     <th>Status</th>
                                 </tr>
                             </thead>
-                            <tfoot>
+                            <!-- <tfoot>
                                 <tr>
                                     <th>No</th>
                                     <th>Waktu Datang</th>
                                     <th>Nama Pegawai</th>
                                     <th>Status</th>
                                 </tr>
-                            </tfoot>
+                            </tfoot> -->
                             <tbody>
                             </tbody>
                         </table>
