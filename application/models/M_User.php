@@ -6,14 +6,20 @@ class M_User extends CI_Model
     public function __construct()
     {
         parent::__construct();
+
+        // Inisialisasi array untuk nama bulan dan hari
         $bulan = array(1 => "Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember");
         $hari = array("Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu");
+
+        // Mendapatkan tanggal hari ini dalam format tertentu
         $this->get_today_date = $hari[(int)date("w")] . ', ' . date("j ") . $bulan[(int)date('m')] . date(" Y");
-        $this->get_datasess = $this->db->get_where('user', ['username' =>
-        $this->session->userdata('username')])->row_array();
+
+        // Mendapatkan data sesi pengguna dan pengaturan aplikasi dari database
+        $this->get_datasess = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();
         $this->appsetting = $this->db->get_where('db_setting', ['status_setting' => 1])->row_array();
     }
 
+    // Menghapus session rememberme berdasarkan tipe yang diberikan
     public function clearremember($rmbtype)
     {
         if ($rmbtype == 'all') {
@@ -23,15 +29,18 @@ class M_User extends CI_Model
         }
     }
 
+    // Mendapatkan data rememberme sesuai dengan username pengguna
     public function fetchrememberme()
     {
         return $this->db->get_where('db_rememberme', ['username' => $this->get_datasess['username']])->result();
     }
 
+    // Mengatur pengaturan pengguna berdasarkan jenis pengaturan yang diberikan
     public function user_setting($usrsetting)
     {
         if ($usrsetting == 'basic') {
 
+            // Menyiapkan data untuk disimpan dalam database
             if (empty($this->input->post('npwp_pegawai'))) {
                 $rownpwp = 'Tidak Ada';
             } else {
@@ -41,6 +50,8 @@ class M_User extends CI_Model
                 'umur' => $this->input->post('umur_pegawai'),
                 'npwp' => $rownpwp
             ];
+
+            // Mengelola pengunggahan gambar pengguna
             $upload_image = $_FILES['pas_foto']['name'];
 
             if ($upload_image) {
@@ -73,6 +84,8 @@ class M_User extends CI_Model
                     return "default.png";
                 }
             }
+
+            // Menyimpan data ke dalam database
             $this->db->set($sendsave);
             $this->db->where('username', htmlspecialchars($this->input->post('username_pegawai', true))); // mengambil data dari session
             $this->db->update('user');
